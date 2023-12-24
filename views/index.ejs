@@ -1,5 +1,42 @@
 
 <%- include ("partials/header.ejs") %>
+<div class="container mt-4"> 
+<div class="px-4 py-5 my-5 text-center">
+ 
+    <h1 class="display-5 fw-bold text-body-emphasis">Welcome to an Empty Blog</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Let's Test if you can create a blog</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Create a Post</button> -->
+      </div>
+    </div>
+  </div>
+
+<%- include ("create.ejs") %>
+  
+
+   
+        <% blogs.forEach(function(post) { %>
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary border-primary-4">
+        <div class="container col-lg-6 px-5 border-primary ">
+          <h1 class="display-4 fst-italic"> <%= post.title %></h1>
+          <p class="lead my-4"><%= post.content %></p>
+          <p><%= post.date %></p>
+          
+    
+        </div>
+      </div>
+    </div>
+    <% }); %>
+
+
+</div>
+
+
+
+
+
+ 
 
 
 <%- include ("partials/footer.ejs") %>
